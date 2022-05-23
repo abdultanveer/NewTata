@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -13,5 +14,9 @@ public class RecyclerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler);
         RecyclerView subjectRecyclerView = findViewById(R.id.subs_recyclerView); //socket
+        subjectRecyclerView.setLayoutManager(new LinearLayoutManager(this)); //arrange the items one below the other
+        SubjectsAdapter adapter = new SubjectsAdapter(subjects); //putting the plug into the adapter
+        subjectRecyclerView.setAdapter(adapter); //inserting the adapter into the socket
+
     }
 }
