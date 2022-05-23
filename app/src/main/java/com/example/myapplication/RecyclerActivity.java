@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,6 +16,10 @@ public class RecyclerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recycler);
         RecyclerView subjectRecyclerView = findViewById(R.id.subs_recyclerView); //socket
         subjectRecyclerView.setLayoutManager(new LinearLayoutManager(this)); //arrange the items one below the other
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(subjectRecyclerView.getContext(),
+                new LinearLayoutManager(this).getOrientation());
+        subjectRecyclerView.addItemDecoration(dividerItemDecoration);
+
         SubjectsAdapter adapter = new SubjectsAdapter(subjects); //putting the plug into the adapter
         subjectRecyclerView.setAdapter(adapter); //inserting the adapter into the socket
 
