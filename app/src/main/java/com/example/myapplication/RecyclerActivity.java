@@ -6,8 +6,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
 public class RecyclerActivity extends AppCompatActivity {
+    public static String TAG = RecyclerActivity.class.getSimpleName();
     String[] subjects = new String[]{"english","hindi","urdu","english","hindi","urdu"}; //plug
 
     @Override
@@ -23,6 +26,13 @@ public class RecyclerActivity extends AppCompatActivity {
         subjectRecyclerView.addItemDecoration(dividerItemDecoration);
 
         SubjectsAdapter adapter = new SubjectsAdapter(subjects); //putting the plug into the adapter
+        adapter.setOnItemClickListener(new SubjectsAdapter.ClickListener() {
+            @Override
+            public void onItemClick(int position, View v) {
+                Log.d(TAG, "onItemClick position: " + position);
+
+            }
+        });
         subjectRecyclerView.setAdapter(adapter); //inserting the adapter into the socket
 
         Employee employee = new Employee();
