@@ -14,6 +14,8 @@ public class RecyclerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler);
+        Student abdul = new Student("ansari",123,true);
+        abdul.getName();
         RecyclerView subjectRecyclerView = findViewById(R.id.subs_recyclerView); //socket
         subjectRecyclerView.setLayoutManager(new LinearLayoutManager(this)); //arrange the items one below the other
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(subjectRecyclerView.getContext(),
@@ -23,5 +25,14 @@ public class RecyclerActivity extends AppCompatActivity {
         SubjectsAdapter adapter = new SubjectsAdapter(subjects); //putting the plug into the adapter
         subjectRecyclerView.setAdapter(adapter); //inserting the adapter into the socket
 
+        Employee employee = new Employee();
+        employee.setDob("01-01-01");
+        employee.eName = "ansari";
+
     }
+
+    public int add(int a, int b){
+        return a+b;
+    }
+
 }

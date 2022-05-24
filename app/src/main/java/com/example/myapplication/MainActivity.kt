@@ -8,9 +8,12 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity(), View.OnClickListener { //MainActivity = GEAppliances
     lateinit var submitButton : Button   //Button submitButton
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+       var  abdul = Student("ansari",123,true)
+        abdul.name
 
         submitButton = findViewById(R.id.btnSubmit)
 

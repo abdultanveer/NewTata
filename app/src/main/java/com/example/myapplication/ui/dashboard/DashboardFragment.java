@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.myapplication.Employee;
 import com.example.myapplication.databinding.FragmentDashboardBinding;
 
 public class DashboardFragment extends Fragment { //fragment as a mini activity
@@ -26,6 +27,8 @@ public class DashboardFragment extends Fragment { //fragment as a mini activity
 
         final TextView textView = binding.textDashboard;
         dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        Employee myEmployee = new Employee();
+       // myEmployee.eName = "ansari";
         return root;
     }
 
