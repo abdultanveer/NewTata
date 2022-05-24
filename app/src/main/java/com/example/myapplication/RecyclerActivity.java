@@ -26,6 +26,7 @@ public class RecyclerActivity extends AppCompatActivity {
         subjectRecyclerView.addItemDecoration(dividerItemDecoration);
 
         SubjectsAdapter adapter = new SubjectsAdapter(subjects); //putting the plug into the adapter
+
         adapter.setOnItemClickListener(new SubjectsAdapter.ClickListener() {
             @Override
             public void onItemClick(int position, View v) {

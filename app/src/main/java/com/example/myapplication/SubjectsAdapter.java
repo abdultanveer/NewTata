@@ -67,7 +67,7 @@ public class SubjectsAdapter extends RecyclerView.Adapter<SubjectsAdapter.Subjec
 
 //like my switchboard
     public interface ClickListener {
-        void onItemClick(int position, View v);
+        void onItemClick(int position, View v); //switchOne
     }
 
     public void setOnItemClickListener(ClickListener clickListener) {
