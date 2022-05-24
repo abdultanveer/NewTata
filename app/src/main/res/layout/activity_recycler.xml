@@ -31,12 +31,20 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/subs_recyclerView"
         android:layout_width="wrap_content"
-        app:layout_constraintLeft_toRightOf="@id/navigation_rail"
         android:layout_height="match_parent"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
+        app:layout_constraintLeft_toRightOf="@id/navigation_rail"
 
-       />
+        />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="238dp"
+        tools:layout_editor_absoluteY="72dp"
+        tools:srcCompat="@drawable/car" />
 </androidx.constraintlayout.widget.ConstraintLayout>
