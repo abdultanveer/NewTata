@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
   
 import androidx.annotation.Nullable;
@@ -19,8 +20,8 @@ public class BottomSheetDialog extends BottomSheetDialogFragment {
         View v = inflater.inflate(R.layout.bottom_sheet_layout,
                                   container, false);
   
-        Button algo_button = v.findViewById(R.id.algo_button);
-        Button course_button = v.findViewById(R.id.course_button);
+        TextView algo_button = v.findViewById(R.id.algo_button);
+        TextView course_button = v.findViewById(R.id.course_button);
   
         algo_button.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -8,26 +8,27 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <Button
+    <TextView
         android:id="@+id/algo_button"
-
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="78dp"
-        android:layout_marginTop="74dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="90dp"
         android:drawableTop="@drawable/ic_baseline_home_24"
+        android:gravity="center"
         android:text="Share this Algorithm"
         app:layout_constraintEnd_toStartOf="@+id/course_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <TextView
         android:id="@+id/course_button"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="58dp"
         android:layout_marginEnd="83dp"
+        android:gravity="center"
         android:drawableTop="@drawable/ic_baseline_directions_car_24"
         android:text="Share this Course"
         app:layout_constraintEnd_toEndOf="parent"
