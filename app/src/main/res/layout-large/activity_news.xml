@@ -6,19 +6,18 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     tools:context=".NewsActivity">
-    <!--
-    this layout is for the phones or normal screen size
-    -->
-
+<!--
+this layout is for the tablet or large screen size
+-->
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentHeadlines"
+        android:id="@+id/fragmentContainerView2"
         android:name="com.example.myapplication.fragments.HeadlinesFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentNews"
+        android:id="@+id/fragmentContainerView3"
         android:name="com.example.myapplication.fragments.NewsFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"

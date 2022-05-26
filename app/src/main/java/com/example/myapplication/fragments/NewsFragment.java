@@ -2,17 +2,18 @@ package com.example.myapplication.fragments;
 
 import android.os.Bundle;
 
-import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link NewsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class NewsFragment extends Fragment {
@@ -31,5 +32,10 @@ public class NewsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_news, container, false);
+    }
+
+    public void setText(String headline) {
+        Toast.makeText(getActivity(), "newsfrag-- "+headline, Toast.LENGTH_SHORT).show();
+
     }
 }

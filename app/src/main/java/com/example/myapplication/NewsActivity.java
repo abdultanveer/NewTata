@@ -2,10 +2,12 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Fragment;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.myapplication.fragments.HeadlinesFragment;
+import com.example.myapplication.fragments.NewsFragment;
 
 public class NewsActivity extends AppCompatActivity implements HeadlinesFragment.HeadLinesSelectListener {
 
@@ -17,7 +19,9 @@ public class NewsActivity extends AppCompatActivity implements HeadlinesFragment
 
     @Override
     public void onHeadlineSelected(String headline) {
-        Toast.makeText(this, headline, Toast.LENGTH_SHORT).show();
-
+        //check if the app has been launched on a phone or a tablet..
+           //if news fragment is not null then the app is on tablet else its on phone
+        NewsFragment newsFragment = (NewsFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentNews);
+        newsFragment.setText(headline);
     }
 }
