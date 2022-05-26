@@ -5,19 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:id="@+id/fragment_container"
     tools:context=".NewsActivity">
 <!--
 this layout is for the tablet or large screen size
 -->
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView2"
+        android:id="@+id/headlinesFragment"
         android:name="com.example.myapplication.fragments.HeadlinesFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView3"
+        android:id="@+id/fragmentNews"
         android:name="com.example.myapplication.fragments.NewsFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"

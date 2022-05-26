@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:id="@+id/fragment_container"
+
     tools:context=".NewsActivity">
     <!--
+    adding fragments in xml is static way
     this layout is for the phones or normal screen size
     -->
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentHeadlines"
-        android:name="com.example.myapplication.fragments.HeadlinesFragment"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentNews"
-        android:name="com.example.myapplication.fragments.NewsFragment"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="2" />
-</LinearLayout>
+</FrameLayout>
