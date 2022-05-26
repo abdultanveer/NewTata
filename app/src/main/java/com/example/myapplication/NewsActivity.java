@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -14,6 +15,8 @@ import com.example.myapplication.fragments.NewsFragment;
 
 public class NewsActivity extends AppCompatActivity implements HeadlinesFragment.HeadLinesSelectListener {
     HeadlinesFragment headlinesFragment;
+    public static String TAG = NewsActivity.class.getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,12 @@ public class NewsActivity extends AppCompatActivity implements HeadlinesFragment
 
 
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i(TAG,"onstart");
     }
 
     @Override

@@ -1,10 +1,13 @@
 package com.example.myapplication.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +25,7 @@ import com.example.myapplication.R;
 public class HeadlinesFragment extends Fragment implements AdapterView.OnItemClickListener {
     ListView headlinesLv;
     HeadLinesSelectListener headLinesSelectListener; //bought a switchboard
+    public static String TAG = HeadlinesFragment.class.getSimpleName();
 
     public interface  HeadLinesSelectListener{
         public void onHeadlineSelected(String headline);
@@ -38,6 +42,8 @@ public class HeadlinesFragment extends Fragment implements AdapterView.OnItemCli
 
     public HeadlinesFragment() {
         // Required empty public constructor
+        Log.i(TAG,"constructor");
+
     }
 
     /**
@@ -51,6 +57,8 @@ public class HeadlinesFragment extends Fragment implements AdapterView.OnItemCli
     // TODO: Rename and change types and number of parameters
     public static HeadlinesFragment newInstance(String param1, String param2) {
         HeadlinesFragment fragment = new HeadlinesFragment();
+        Log.i(TAG,"new instance");
+
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +69,8 @@ public class HeadlinesFragment extends Fragment implements AdapterView.OnItemCli
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i(TAG,"oncreate");
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -71,6 +81,8 @@ public class HeadlinesFragment extends Fragment implements AdapterView.OnItemCli
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        Log.i(TAG,"onCreateView");
+
         View fragment = inflater.inflate(R.layout.fragment_headlines, container, false);
         headlinesLv = fragment.findViewById(R.id.lvHeadlines);
         headlinesLv.setOnItemClickListener(this);
@@ -81,5 +93,27 @@ public class HeadlinesFragment extends Fragment implements AdapterView.OnItemCli
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
         String rowText = adapterView.getItemAtPosition(position).toString();
         headLinesSelectListener.onHeadlineSelected(rowText); //clicking the switch
+    }
+
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        Log.i(TAG,"getting attached to the activity");
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Log.i(TAG,"onViewCreated");
+
+
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Log.i(TAG,"onActivityCreated");
+
     }
 }
