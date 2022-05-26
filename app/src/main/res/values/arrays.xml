@@ -6,4 +6,12 @@
         <item>srilanka</item>
         <item>china</item>
     </string-array>
+
+    <string-array name="headlines">
+        <item>headline-1</item>
+        <item>headline-12</item>
+        <item>headline-13</item>
+        <item>headline-14</item>
+        <item>headline-15</item>
+    </string-array>
 </resources>
