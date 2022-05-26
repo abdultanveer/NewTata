@@ -10,22 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".TabActivity"
+            android:exported="true"
+            android:label="@string/title_activity_tab"
+            android:theme="@style/Theme.MyApplication.NoActionBar">
+
+        </activity>
+        <activity
             android:name=".NewsActivity"
             android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".BottomSheetActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".KotlinActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".BottomSheetActivity"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".KotlinActivity"
-            android:exported="true" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
